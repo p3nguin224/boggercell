@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.chart.*?>
+<?import javafx.event.ActionEvent?>
+<?import javafx.event.EventHandler?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.unl.controller.Controller" fx:id="rootpane">
+	<!-- TODO Add Nodes -->
+	<left>
+	<VBox >
+	
+	<VBox>
+	<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="0" GridPane.columnIndex="0">
+         <image>
+            <Image url="file:C:/Users/Khaing Swe Win/eclipse-workspace/FirstFXProj/images/chart_1.png" />
+         </image>
+      	</ImageView>
+	</VBox>
+	<VBox prefHeight="800.0" style="-fx-background-color:lightgreen;-fx-border-color: black;-fx-border-insets: 5;-fx-border-width: 2;">
+	<padding>
+	<Insets left="5"></Insets>
+	</padding>
+	<Label text="Course" >
+	<font>
+	<Font size="20" ></Font>
+	</font>
+	</Label>
+	<Hyperlink >Course List
+	<padding>
+	<Insets left="20"></Insets>
+	</padding>
+	<graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/TipOfTheDay24.gif"/>
+            </ImageView>
+        </graphic>
+	</Hyperlink>
+    <Hyperlink >Add Course
+    <padding>
+	<Insets left="20"></Insets>
+	</padding>
+	<graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/TipOfTheDay24.gif"/>
+            </ImageView>
+        </graphic>
+    </Hyperlink>
+    
+    <Label text="Section" >
+	<font>
+	<Font size="20" ></Font>
+	</font>
+	</Label>
+	<Hyperlink >Section List
+	<padding>
+	<Insets left="20"></Insets>
+	</padding>
+	<graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/TipOfTheDay24.gif"/>
+            </ImageView>
+        </graphic>
+	</Hyperlink>
+    <Hyperlink >Add Section
+    <padding>
+	<Insets left="20"></Insets>
+	</padding>
+	<graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/TipOfTheDay24.gif"/>
+            </ImageView>
+        </graphic>
+    </Hyperlink>
+    
+    <Label text="Student" >
+	<font>
+	<Font size="20" ></Font>
+	</font>
+	</Label>
+	<Hyperlink fx:id="showSList">Student List
+	<padding>
+	<Insets left="20"></Insets>
+	</padding>
+	<graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/TipOfTheDay24.gif"/>
+            </ImageView>
+        </graphic>
+	</Hyperlink>
+    <Hyperlink fx:id="addStudent" >Add Student
+    <padding>
+	<Insets left="20"></Insets>
+	</padding>
+	<graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/TipOfTheDay24.gif"/>
+            </ImageView>
+        </graphic>
+    </Hyperlink>
+	</VBox>
+	</VBox>
+	</left>
+	<center>
+	<VBox>
+	<HBox spacing="10"  >
+		<padding>
+		<Insets top="15" right="10" bottom="10" left="15"/>
+		</padding>
+			<Button text="Number of Students:300"  prefHeight="200" style="-fx-background-color:red;">
+			</Button>
+			<Button text="Number of Courses:5"  prefHeight="200" style="-fx-background-color:lightgreen;">
+			</Button>
+			<Button text="Number of Sections:20" prefWidth="200" prefHeight="200" style="-fx-background-color:yellow;">
+			</Button>
+		</HBox>
+		<HBox spacing="10"  >
+		<padding>
+		<Insets top="15" right="10" bottom="10" left="15"/>
+		</padding>
+		<BarChart fx:id="barChart"  prefHeight="205.0" prefWidth="409.0" >
+        <xAxis>
+          <CategoryAxis label="Year" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis  label="Student" side="LEFT"/>
+        </yAxis>
+      </BarChart>
+      <LineChart fx:id="lineChart"  prefHeight="416.0" prefWidth="1000.0" title="Temperature of session">
+              <xAxis>
+                <CategoryAxis label="Course"  />
+              </xAxis>
+              <yAxis>
+                <NumberAxis  label="Student" side="LEFT" upperBound="160.0" />
+              </yAxis>
+            </LineChart>
+      	
+		</HBox>
+		<HBox>
+		
+		<ImageView fitHeight="400.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="0" GridPane.columnIndex="0">
+         <image>
+            <Image url="file:C:/Users/Khaing Swe Win/eclipse-workspace/FirstFXProj/images/chart_1.png" />
+         </image>
+      	</ImageView>
+		</HBox>
+		</VBox>
+	</center>
+</BorderPane>
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.chart.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.unl.controller.StudentUpdateController" >
+	<!-- TODO Add Nodes -->
+	
+	<center>
+	<GridPane >
+	<padding>
+	<Insets top="20" right="20"/>
+	</padding>
+	<!-- TODO Add Nodes -->
+	<Label text="Name" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+	<TextField fx:id="txtName" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+	<Label text="Gender" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+	<fx:define>
+	<ToggleGroup fx:id="toggleGender"></ToggleGroup>
+	</fx:define>
+	<HBox GridPane.rowIndex="1" GridPane.columnIndex="1">
+	<padding>
+	<Insets top="20"/>
+	</padding>
+	<RadioButton fx:id="frb" text="Female" toggleGroup="$toggleGender">
+	<padding>
+	<Insets top="20" right="20"/>
+	</padding>
+	</RadioButton>
+	<RadioButton fx:id="mrb" text="Male" toggleGroup="$toggleGender"/>
+	</HBox>
+	<Button text="Update" GridPane.rowIndex="2" GridPane.columnIndex="0" fx:id="btn_Update"/>
+	<Button text="Cancel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+</GridPane>
+	</center>
+	</BorderPane>
+
+
